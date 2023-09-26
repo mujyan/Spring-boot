@@ -6,4 +6,4 @@ spring:
         format_sql: true
     defer-datasource-initialization: true
 server:
-  port: 5000
+  port: 8080

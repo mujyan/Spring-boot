@@ -8,8 +8,6 @@ import java.util.List;
 public class ReadFile {
     public static String readfile() throws IOException {
         String html = Files.readString(Paths.get(".\\src\\main\\resources\\templates\\mainPage.html"));
-
-        System.out.println(html);
         return html;
     }
 }

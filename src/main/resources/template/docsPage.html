@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>자바 프로그래밍 1조</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --bar-width: 10px; /* 초기 너비 설정 */
+        }
+
+        @keyframes grow {
+            from { transform: scaleX(0); }
+            to { transform: scaleX(2); }
+        }
+
+        .red-bar {
+            width: 200%;
+            height: 10px;
+            animation: grow auto linear;
+            animation-timeline: scroll(root block);
+            background-color: red;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="red-bar"></div>
+    <nav class="bg-gray-600 p-3 flex justify-start">
+        <img class="w-10 mr-5" src="/image/logo.svg" alt="logo">
+        <a class="text-gray-300 p-3 border-2" href="http://mujyan.tplinkdns.com/">Info</a>
+        <a class="text-gray-300 p-3 border-2" href="http://mujyan.tplinkdns.com/docs">Docs</a>
+        <a class="text-gray-300 p-3 border-2" href="https://github.com/mujyan/Spring-boot">Visit Github</a>
+    </nav>
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold mb-4">내용 목차</h1>
+        <ul class="space-y-2">
+            <!-- 목차 항목을 생성하고 Thymeleaf를 사용하여 섹션 ID를 연결합니다. -->
+            <li><a href="#api-section" class="text-blue-500 hover:underline">섹션 1</a></li>
+            <li><a href="#app-function" class="text-blue-500 hover:underline">섹션 2</a></li>
+
+        </ul>
+    </div>
+    <div class="p-2">
+        <div id="api-section" class="p-6 border-2">
+            <h1 class="text-center font-semibold text-2xl pb-2">API</h1>
+            <br>
+            <h2 class="font-semibold text-1xl pb-2">GET REQUEST</h2>
+            <p class="text-left font-semibold text-1xl pl-6 border-2">
+                <span class="text-red-800">1. JSON 형식 요청<br></span>
+                <span class="pl-5">http://mujyan.tplinkdns.com/api/json?filename={<span class="text-red-500">query</span>}
+                            <br>
+                            <span class="pl-5">
+                                ex) http://mujyan.tplinkdns.com/api/json?filename=test
+                            </span>
+                        </span>
+            </p>
+        </div>
+        <div id="app-section" class="p-6 border-2">
+            <h1 class="text-center font-semibold text-2xl pb-2">APP GUIDE</h1>
+            <br>
+            <h2 class="font-semibold text-1xl pb-2">DEU SERVICE</h2>
+            <p class="text-left font-semibold text-1xl pl-6 border-2">
+                <span class="text-red-800">1. Door 공지사항<br></span>
+                <br>
+                앱 개발 후 내용 추가 예정
+                <br><br><br>
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

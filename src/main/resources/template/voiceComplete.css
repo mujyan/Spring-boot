@@ -1,0 +1,104 @@
+.e26_128 { 
+	overflow:hidden;
+}
+.e26_128 { 
+	background-color:rgba(249.00000035762787, 249.00000035762787, 249.00000035762787, 1);
+	width:375px;
+	height:812px;
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
+	position:absolute;
+}
+.e26_129 { 
+	width:326px;
+	height:56px;
+	position:absolute;
+	left:25px;
+	top:720px;
+}
+.e26_130 { 
+	background-color:rgba(24.000000469386578, 160.00000566244125, 251.00000023841858, 1);
+	width:326px;
+	height:56px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+}
+.e26_131 { 
+	color:rgba(255, 255, 255, 1);
+	width:225px;
+	height:20px;
+	position:absolute;
+	left:51px;
+	top:16px;
+	font-family:Poppins;
+	text-align:center;
+	font-size:17px;
+	letter-spacing:-0.23999999463558197;
+	line-height:px;
+}
+.e26_132 { 
+	width:172px;
+	height:172px;
+	position:absolute;
+	left:102px;
+	top:99px;
+}
+.e26_133 { 
+	border-radius:500px;
+	background-color:rgba(24.000000469386578, 160.00000566244125, 251.00000023841858, 1);
+	width:172px;
+	height:172px;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.e26_134 { 
+    background-color:rgba(24.000000469386578, 160.00000566244125, 251.00000023841858, 1);
+	transform: rotate(4.945826068140808deg);
+	width:66px;
+	height:54px;
+	position:absolute;
+	left:60px;
+	top:56px;
+    background-image: url('images/check.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.e26_151 { 
+	color:rgba(0, 0, 0, 1);
+	width:326px;
+	height:238px;
+	position:absolute;
+	left:25px;
+	top:326px;
+	font-family:Poppins;
+	text-align:left;
+	font-size:16px;
+	letter-spacing:0;
+	line-height:px;
+}
+.e26_152 { 
+	width:45.750022888183594px;
+	height:45.75001907348633px;
+	position:absolute;
+	left:25px;
+	top:51px;
+}
+.e26_153 { 
+	background-image: url('https://www.kadra.or.kr/kadra_m/images/back_btn.png');
+    width: 45.75px;
+    height: 45.75px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}

@@ -21,23 +21,20 @@ dependencies {
     implementation 'org.seleniumhq.selenium:selenium-java:4.13.0'
     implementation 'org.seleniumhq.selenium:selenium-http-jdk-client:4.13.0'
 
-
-
-    runtimeOnly 'com.h2database:h2' // 인메모리 repository
-
     // 롬북
     annotationProcessor 'org.projectlombok:lombok'
     compileOnly 'org.projectlombok:lombok'
 
-
-    // h2
-    implementation 'com.h2database:h2'
     // mysql
+    implementation 'mysql:mysql-connector-java:8.0.32'
     runtimeOnly 'mysql:mysql-connector-java'
     testImplementation 'org.junit.platform:junit-platform-launcher:1.5.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.5.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.5.0'
     implementation 'org.hibernate:hibernate-core:6.1.6.Final'
     implementation 'javax.persistence:javax.persistence-api:2.2'
+
+    // gpt
+    implementation 'io.github.flashvayne:chatgpt-spring-boot-starter:1.0.4'
 
 }

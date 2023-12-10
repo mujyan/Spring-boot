@@ -1,41 +1,61 @@
-<html>
-<head>
-    <link href="login.css" rel="stylesheet" type="text/css">
-    <script>
-        function redirectMainPage() {
-            var MainPageURL = "main.html";
-            window.location.href = MainPageURL;
-        }
+<html lang="ko-KR">
 
-        function redirectToSignupPage() {
-            var signupPageURL = "signup.html";
-            window.location.href = signupPageURL;
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/login.css" type="text/css">
+    <script>
+        function post() {
+            var formData = {
+                id: document.getElementById("userName").value,
+                password: document.getElementById("userPassword").value,
+            };
+            fetch("/login/processing" , {
+                method: "POST",
+                headers: {
+                "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            })
+                .then((response) => response.text())
+                .then((data) => {
+                console.log("Success:", data);
+
+                    if(data==='Login successful') {
+                        window.location.href = '/functions';
+                    }
+                })
+                .catch((error) => {
+                console.error("Error:", error);
+
+            });
         }
     </script>
 </head>
 <body>
     <div class="e26_945">
         <span class="e26_946">계정이 없으신가요? </span>
-        <span class="e26_947" onclick="redirectToSignupPage()">회원가입</span>
-        <div class="e26_948">
-            <div class="e26_949" onclick="redirectMainPage()"></div>
-            <span class="e26_950">로그인</span>
-        </div>
-        <div class="e26_951">
-            <div class="e26_952"></div>
-            <div class="e26_953">
-                <span class="e26_954">
-                    <input type="password" name="userPassword" placeholder="비밀번호">
-                </span>
-                <div class="e26_955"></div>
+        <span class="e26_947" onclick="window.location.href = '/register'">회원가입</span>
+        <form>
+            <div class="e26_948">
+                <div class="e26_949" onclick="post()"></div>
+                <span class="e26_950">로그인</span>
             </div>
-        </div>
-        <div class="e26_956">
-            <div class="e26_957"></div>
-            <span class="e26_958">
-                <input type="text" name="userName" placeholder="학번">
-            </span>
-        </div>
+            <div class="e26_951">
+                <div class="e26_952"></div>
+                <div class="e26_953">
+                    <span class="e26_954">
+                        <input id="userPassword" type="password" name="userPassword" placeholder="비밀번호">
+                    </span>
+                    <div class="e26_955"></div>
+                </div>
+            </div>
+            <div class="e26_956">
+                <div class="e26_957"></div>
+                <span class="e26_958">
+                    <input id="userName" type="text" name="userName" placeholder="학번">
+                </span>
+            </div>
+        </form>
         <span class="e26_959">로그인 해주세요</span>
         <span class="e26_1214">안녕하세요!</span>
         <div class="e26_961">

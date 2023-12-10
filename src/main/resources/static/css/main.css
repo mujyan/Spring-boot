@@ -1,0 +1,147 @@
+.e26_848 { 
+	overflow:hidden;
+}
+.e26_848 { 
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:rgba(249.00000035762787, 249.00000035762787, 249.00000035762787, 1);
+	width:375px;
+	height:812px;
+	border-top-left-radius:25px;
+	border-top-right-radius:25px;
+	border-bottom-left-radius:25px;
+	border-bottom-right-radius:25px;
+	position:absolute;
+}
+.e26_865 { 
+	color:rgba(32.00000189244747, 34.00000177323818, 68.00000354647636, 1);
+	width:234px;
+	height:40px;
+	position:absolute;
+	left:71px;
+	top:54px;
+	font-family:Poppins;
+	text-align:center;
+	font-size:18px;
+	letter-spacing:0;
+	line-height:px;
+}
+.e26_866 { 
+	width:45.750022888183594px;
+	height:45.75001907348633px;
+	position:absolute;
+	left:25px;
+	top:51px;
+}
+.e26_867 { 
+    background-image: url('https://www.kadra.or.kr/kadra_m/images/back_btn.png');
+    width: 45.75px;
+    height: 45.75px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+.e26_868 { 
+	transform: rotate(-90.00000250447808deg);
+	background-color:rgba(34.00000177323818, 38.0000015348196, 40.00000141561031, 0.15000000596046448);
+	width:42.100364685058594px;
+	height:42.100364685058594px;
+	position:absolute;
+	left:1.8246021270751953px;
+	top:43.92512893676758px;
+}
+.e26_869 { 
+	transform: rotate(-90.00000250447827deg);
+	background-color:rgba(34.00000177323818, 38.0000015348196, 40.00000141561031, 1);
+	width:45.75001525878906px;
+	height:45.75001907348633px;
+	position:absolute;
+	left:9.536746574667632e-7px;
+	top:45.750022888183594px;
+}
+.e26_870 { 
+	transform: rotate(180deg);
+	width:14px;
+	height:0px;
+	position:absolute;
+	left:30px;
+	top:23px;
+}
+.e26_870 { 
+	border:2px solid rgba(32.00000189244747, 34.00000177323818, 68.00000354647636, 1);
+}
+.e26_871 { 
+	width:326px;
+	height:56px;
+	position:absolute;
+	left:25px;
+	top:720px;
+}
+.e26_872 { 
+	background-color:rgba(24.000000469386578, 160.00000566244125, 251.00000023841858, 1);
+	width:326px;
+	height:56px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+}
+.e26_873 { 
+	color:rgba(255, 255, 255, 1);
+	width:225px;
+	height:20px;
+	position:absolute;
+	left:51px;
+	top:18px;
+	font-family:Poppins;
+	text-align:center;
+	font-size:17px;
+	letter-spacing:-0.23999999463558197;
+	line-height:px;
+}
+.e26_874 { 
+	width:142px;
+	height:135px;
+	position:absolute;
+	left:34px;
+	top:185px;
+	background-image:url('../images/plate_1.png');
+	background-repeat:no-repeat;
+	background-size: contain;
+    background-position: center;
+}
+.e26_875 { 
+	width:142px;
+	height:128.7701873779297px;
+	position:absolute;
+	left:194px;
+	top:188px;
+	background-image:url('../images/alarm_1.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.e26_876 { 
+	width:142px;
+	height:142px;
+	position:absolute;
+	left:194px;
+	top:413px;
+	background-image:url('../images/pen_1.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+.e26_877 { 
+	width:142px;
+	height:146.08045959472656px;
+	position:absolute;
+	left:34px;
+	top:411px;
+	background-image:url('../images/chair_1.png');
+	background-repeat:no-repeat;
+	background-size:cover;
+}

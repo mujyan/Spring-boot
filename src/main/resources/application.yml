@@ -15,7 +15,7 @@ spring:
       hibernate:
         format_sql: true
 chatgpt:
-  api-key: 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
+  api-key: 
 server:
   port: 443
   ssl:

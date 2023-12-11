@@ -74,7 +74,7 @@
 	height:40px;
 	position:absolute;
     top: -10px;
-    background-image:url(images/plate_1.png);
+    background-image:url("../images/plate_1.png");
 	background-repeat:no-repeat;
 	background-size: contain;
     background-position: center;
@@ -91,7 +91,7 @@
 	height:35px;
 	position:absolute;
     top: -7px;
-    background-image:url(images/pen_1.png);
+    background-image:url("../images/pen_1.png");
 	background-repeat:no-repeat;
 	background-size: contain;
     background-position: center;
@@ -109,7 +109,7 @@
 	height:40px;
 	position:absolute;
     top: -10px;
-    background-image:url(images/chair_1.png);
+    background-image:url("../images/chair_1.png");
 	background-repeat:no-repeat;
 	background-size: contain;
     background-position: center;
@@ -128,7 +128,7 @@
 	height:40px;
 	position:absolute;
     top: -10px;
-    background-image:url(images/alarm_1.png);
+    background-image:url("../images/alarm_1.png");
 	background-repeat:no-repeat;
 	background-size: contain;
     background-position: center;
@@ -294,7 +294,7 @@
 	position:absolute;
 	left:0px;
 	top:0px;
-	background-image:url(images/lunch_1.png);
+	background-image:url("../images/lunch_1.png");
 	background-repeat:no-repeat; 
 	background-size:cover;
 }
@@ -332,7 +332,7 @@
 	position:absolute;
 	left:0px;
 	top:0px;
-	background-image:url(images/lunch_1.png);
+	background-image:url("../images/lunch_1.png");
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -370,7 +370,7 @@
 	position:absolute;
 	left:0px;
 	top:0px;
-	background-image:url(images/lunch_1.png);
+	background-image:url("../images/lunch_1.png");
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -380,7 +380,7 @@
 	position:absolute;
 	left:11px;
 	top:360px;
-	background-image:url(images/lunch_1.png);
+	background-image:url("../images/lunch_1.png");
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -390,7 +390,7 @@
 	position:absolute;
 	left:251px;
 	top:578px;
-	background-image:url(images/salad_1.png);
+	background-image:url("../images/salad_1.png");
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -400,7 +400,7 @@
 	position:absolute;
 	left:251px;
 	top:415px;
-	background-image:url(images/noodles_1.png);
+	background-image:url("../images/noodles_1.png");
 	background-repeat:no-repeat;
 	background-size:cover;
 }
@@ -410,7 +410,7 @@
 	position:absolute;
 	left:251px;
 	top:255px;
-	background-image:url(images/hot_pot_1.png);
+	background-image:url("../images/hot_pot_1.png");
 	background-repeat:no-repeat;
 	background-size:cover;
 }

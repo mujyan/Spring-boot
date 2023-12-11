@@ -24,8 +24,6 @@ public class Member {
     private String name;
     @Column
     private String tel;
-    @Column
-    private String createdTime;
 
     public String getId() {
         return id;

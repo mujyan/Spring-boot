@@ -34,7 +34,7 @@ public class LoginController {
 
     @PostMapping(value = "login/processing", consumes = "application/json")
     public ResponseEntity<String> LoginProcess(@RequestBody IDPW idpw, HttpServletRequest request, HttpServletResponse response) {
-        System.out.println("-------"+memberRepository.existsById(idpw.id));
+
         if (authenticate(idpw)) {
             HttpSession session = request.getSession(true);
             session.setAttribute("username", idpw.id);
@@ -70,7 +70,7 @@ public class LoginController {
     public void homeLogin(@CookieValue(name = "JSESSIONID", required = false) String memberId,
                           Model model) {
         //model.addAttribute("");
-        System.out.print(memberId);
+
     }
 }
 

@@ -22,8 +22,8 @@ dependencies {
     implementation 'org.seleniumhq.selenium:selenium-http-jdk-client:4.13.0'
 
     // 롬북
-    annotationProcessor 'org.projectlombok:lombok'
     compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 
     // mysql
     implementation 'mysql:mysql-connector-java:8.0.32'
@@ -37,4 +37,6 @@ dependencies {
     // gpt
     implementation 'io.github.flashvayne:chatgpt-spring-boot-starter:1.0.4'
 
+    // csv
+    implementation 'com.opencsv:opencsv:5.6'
 }

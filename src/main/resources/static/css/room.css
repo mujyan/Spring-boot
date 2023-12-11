@@ -50,7 +50,7 @@
 	height:40px;
 	position:absolute;
     top: -10px;
-    background-image:url(images/plate_1.png);
+    background-image:url("../images/plate_1.png");
 	background-repeat:no-repeat;
 	background-size: contain;
     background-position: center;
@@ -68,7 +68,7 @@
 	height:35px;
 	position:absolute;
     top: -7px;
-    background-image:url(images/pen_1.png);
+    background-image:url("../images/pen_1.png");
 	background-repeat:no-repeat;
 	background-size: contain;
     background-position: center;
@@ -87,7 +87,7 @@
 	height:40px;
 	position:absolute;
     top: -10px;
-    background-image:url(images/chair_1.png);
+    background-image:url("../images/chair_1.png");
 	background-repeat:no-repeat;
 	background-size: contain;
     background-position: center;
@@ -105,7 +105,7 @@
 	height:40px;
 	position:absolute;
     top: -10px;
-    background-image:url(images/alarm_1.png);
+    background-image:url("../images/alarm_1.png");
 	background-repeat:no-repeat;
 	background-size: contain;
     background-position: center;
@@ -359,7 +359,7 @@
 }
 .e26_516 { 
 	color: rgba(32.00000189244747, 34.00000177323818, 68.00000354647636, 1);
-    width: 55px;
+    width: 70px;
     height: 40px;
     position: absolute;
     left: 0px;
@@ -370,6 +370,7 @@
     letter-spacing: 0;
     line-height: px;
     font-weight: bold;
+    border: none;
 }
 .e26_517 { 
 	background-color:rgba(32.00000189244747, 34.00000177323818, 68.00000354647636, 1);

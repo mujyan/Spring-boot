@@ -10,7 +10,6 @@ import java.util.List;
 
 @RestController
 public class TimeTableController {
-
     @PostMapping("/api/timetable")
     public List<Exceldto> TimeTableApi(@RequestBody Exceldto exceldto ) {
         DataService ds = new DataService(exceldto.getTime(), exceldto.getBuildingName());

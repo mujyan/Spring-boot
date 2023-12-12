@@ -15,7 +15,7 @@
           </div>
           <div class="e26_470">
             <div class="e26_471" onclick="window.location.href = 'voice'"></div>
-            
+
           </div>
           <div class="e26_475">
             <div class="e26_476"></div>
@@ -126,7 +126,6 @@
             "time": "=\""+ document.getElementById("week").value + document.getElementById("time").value,
             "buildingName": document.getElementById("building").value
         };
-        console.log(document.getElementById("building").value);
 
         // POST 요청을 보낼 API 엔드포인트
         var apiEndpoint = "/api/timetable";
@@ -135,22 +134,24 @@
         fetch(apiEndpoint, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json;charset=UTF-8',
             },
             body: JSON.stringify(postData),
         })
-        .then(response => response.json())
+        .then(response => { return response.json(); })
         .then(data => {
+            console.log(data+'1');
             // API로부터 받은 데이터
             var responseData = data;
 
             // e26_483 태그 찾기
             var e26_483 = document.querySelector('.e26_483');
-            e26_483.innerHTML = '';
+            //e26_483.innerHTML = ' ';
 
             // e26_483 태그에 데이터 동적으로 채우기
             var topValue = 9;
             responseData.forEach(function (item) {
+
                 var content = `
                     <div style="top: ${topValue}px;" class="e26_493">
                         <div class="e26_485">

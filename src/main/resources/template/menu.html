@@ -24,7 +24,13 @@
       <div class="e26_566" onclick="window.location.href = 'alarm'"></div>
     </div>
   </div>
-  <div class="e26_567"><span class="e26_568">건물</span></div>
+  <div class="e26_567">
+    <select id="building" class="e26_568">
+      <option value="suduk">수덕전</option>
+      <option value="info">정보관</option>
+      <option value="emply">정보관 직원식당</option>
+    </select>
+  </div>
   <div class="e26_570">
     <div class="e26_571" onclick="window.location.href = '/functions'">
       
@@ -34,7 +40,7 @@
   </div>
   <div class="e26_591">
     <div class="e26_592">
-      <div class="e26_594"><span class="e26_595">날짜</span></div>
+      <div class="e26_594"><input id="date" type="date" class="e26_595" contenteditable="true">날짜</input></div>
     </div>
   </div>
   <div class="e26_597">
@@ -52,8 +58,50 @@
   <div class="e26_603"></div>
   <div class="e26_604"></div>
   <div class="e26_605"></div>
-  <div class="e26_606"></div><span class="e26_607">손만두백반</span><span class="e26_608">라면
-    라면밥(500원추가)</span><span class="e26_609">오므라이스&amp;소시지</span>
+  <div class="e26_606"></div><span id="5000" class="e26_607">날짜를 선택하세요 !</span><span id="3000" class="e26_608">날짜를 선택하세요 !</span><span id="4500" class="e26_609">날짜를 선택하세요 !</span>
 </div>
+</body>
+<script>
 
-</body></html>
+  async function fetchLectureData() {
+      var postData = {
+        "inputBuildingName": document.getElementById("building").value,
+        "formattedDate": document.getElementById("date").value.replace(/-/g, '')
+      };
+      try {
+          const response = await fetch('/api/menu', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(postData),
+          });
+
+          if (!response.ok) {
+              throw new Error('Failed to fetch data');
+          }
+
+          return await response.json();
+      } catch (error) {
+          console.error('Error fetching data:', error.message);
+          return null;
+      }
+  }
+
+
+  async function renderMenuData() {
+      const menuData = await fetchLectureData();
+
+      if (!menuData) {
+          return;
+      }
+      const keys = Object.keys(menuData)
+      document.getElementById("5000").innerText=menuData[keys[0]];
+      document.getElementById("3000").innerText=menuData[keys[1]];
+      document.getElementById("4500").innerText=menuData[keys[2]];
+  }
+
+  const dateInput = document.getElementById('date');
+  dateInput.addEventListener('input', renderMenuData);
+</script>
+</html>

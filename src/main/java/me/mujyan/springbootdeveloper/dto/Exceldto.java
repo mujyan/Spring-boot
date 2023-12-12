@@ -12,7 +12,6 @@ public class Exceldto {
     private String subjectName;
     private String instructor;
 
-    // 생성자, getter, setter 등을 추가할 수 있음
     public String getTime() {
         return time;
     }

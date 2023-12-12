@@ -1,6 +1,7 @@
 package me.mujyan.springbootdeveloper.service;
 
 import com.opencsv.exceptions.CsvValidationException;
+import lombok.Getter;
 import me.mujyan.springbootdeveloper.dto.Exceldto;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Getter
 public class DataService {
 
     private List<Exceldto> dataList = new ArrayList<>();

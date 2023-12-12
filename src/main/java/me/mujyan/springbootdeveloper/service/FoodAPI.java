@@ -46,19 +46,37 @@ for (int i = 0; i < 3; i++) System.out.println(foodAPI.returnFood(i));
 */
 
 public class FoodAPI {
-    public static int getFood(int Number) {
-        String formattedDate = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
-        String[] buildingQuery = {"&gubun1=1&gubun2=1", "&gubun1=1&gubun2=2", "&gubun1=3&gubun2="};
-        String[] buildingName = {"-suduk", "-info", "-emply"};
+    public static JSONObject getFood(String inputBuildingName, String formattedDate) {
+        int Number = 0;
+        switch (inputBuildingName){
+            case "suduk":
+                Number = 0;
+                break;
+            case "info":
+                Number = 1;
+                break;
+            case "emply":
+                Number = 2;
+                break;
+            default:
+                Number = 0;
+                break;
+        }
+        String[] buildingQuery = { "&gubun1=1&gubun2=1", "&gubun1=1&gubun2=2", "&gubun1=3&gubun2=" };
+        String[] buildingName = { "-suduk", "-info", "-emply" };
         String apiUrl = "https://smart.deu.ac.kr/m/sel_dfood?date=" + formattedDate + buildingQuery[Number];
         formattedDate = formattedDate + buildingName[Number];
+        String savedName = formattedDate + ".json";
         File fileCheck = new File(formattedDate + ".json");
-        if (fileCheck.exists()){
-//            System.out.println("파일이 존재합니다.");
-            return 0;
-        }
-        else {
-//            System.out.println("파일을 생성합니다.");
+        if (fileCheck.exists()) {
+            try {
+                String jsonData = new String(Files.readAllBytes(Paths.get(savedName)));
+                return new JSONObject(jsonData);
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
+        } else {
             try {
                 URL url = new URL(apiUrl);
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -77,7 +95,7 @@ public class FoodAPI {
             } catch (IOException e) {
                 System.out.println("Json 데이터 저장 실패");
                 e.printStackTrace();
-                return -1;
+                return null;
             }
             try {
                 String filePath = formattedDate + ".json";
@@ -95,26 +113,17 @@ public class FoodAPI {
                     file.write(newJsonObject.toString(4));
                 }
             } catch (Exception e) {
-//                System.out.println("Json 데이터 정리 실패");
+                // System.out.println("Json 데이터 정리 실패");
                 e.printStackTrace();
-                return -1;
+                return null;
             }
-            return 1;
-        }
-    }
-
-    public static JSONObject returnFood(int Number) {
-        String formattedDate = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
-        String[] buildingQuery = {"&gubun1=1&gubun2=1", "&gubun1=1&gubun2=2", "&gubun1=3&gubun2="};
-        String[] buildingName = {"-suduk", "-info", "-emply"};
-        formattedDate = formattedDate + buildingName[Number] + ".json";
-//        System.out.println(formattedDate);
-        try {
-            String jsonData = new String(Files.readAllBytes(Paths.get(formattedDate)));
-            return new JSONObject(jsonData);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
+            try {
+                String jsonData = new String(Files.readAllBytes(Paths.get(savedName)));
+                return new JSONObject(jsonData);
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            }
         }
     }
 }

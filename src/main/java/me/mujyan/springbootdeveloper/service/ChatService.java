@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ChatService {
     private final ChatgptService chatgptService;
-
     public String getChatResponse(String prompt) {
         // ChatGPT 에게 질문 전달
         return chatgptService.sendMessage(prompt);

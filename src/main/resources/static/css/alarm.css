@@ -401,27 +401,22 @@
     background-size: contain; 
 }
 
-.e26_406 { 
-	width:131px;
+.e26_406 {
+    position: relative;
+	width:80%;
 	height:65px;
-	position:absolute;
-	left:25px;
-	top:146px;
 }
-.e26_407 { 
-	width:86px;
+.e26_407 {
+    position: relative;
+	width:100%;
 	height:65px;
-	position:absolute;
 	left:45px;
 	top:0px;
 }
-.e26_408 { 
+.e26_408 {
+    position: relative;
 	color:rgba(32.00000189244747, 34.00000177323818, 68.00000354647636, 1);
-	width:94px;
-	height:40px;
-	position:absolute;
-	left:0px;
-	top:2px;
+	top:10px;
 	font-family:Poppins;
 	text-align:left;
 	font-size:13px;
@@ -431,42 +426,36 @@
 .e26_409 { 
 	width:68px;
 	height:20px;
-	position:absolute;
-	left:0px;
-	top:45px;
 }
-.e26_411 { 
+.e26_411 {
+    position: relative;
+    bottom: 80px;
 	width:31px;
 	height:31px;
-	position:absolute;
 	left:0px;
-	top:4px;
 }
 .e26_412 { 
 	background-color:rgba(24.000000469386578, 160.00000566244125, 251.00000023841858, 0.10000000149011612);
+	position: relative;
 	width:31px;
 	height:31px;
-	position:absolute;
 	left:0px;
-	top:0px;
+	top:30px;
 	border-top-left-radius:5px;
 	border-top-right-radius:5px;
 	border-bottom-left-radius:5px;
 	border-bottom-right-radius:5px;
 }
-.e26_413 { 
+.e26_413 {
+    position: relative;
 	width:16.552715301513672px;
 	height:14.664012908935547px;
-	position:absolute;
 	left:7px;
-	top:8px;
+	top:5px;
 }
 .e26_415 { 
     width: 18px;
     height: 15.735602378845215px;
-    position: absolute;
-    left: 0.5;
-    top: -1;
     background-image: url('../images/weeklycalendar_Sky.png');
     background-repeat: no-repeat;
     background-size: contain; 
@@ -487,11 +476,6 @@
 }
 .e26_432 { 
 	color:rgba(32.00000189244747, 34.00000177323818, 68.00000354647636, 1);
-	width:134px;
-	height:20px;
-	position:absolute;
-	left:25px;
-	top:118px;
 	font-family:Nunito;
 	text-align:left;
 	font-size:17px;

@@ -26,76 +26,11 @@
       <div class="e26_287"></div>
     </div>
   </div>
-  <div class="e26_288">
-    <div class="e26_289"><span class="e26_361">문화 산업법 과제 제출 전날입니다.</span></div>
-    <div class="e26_291">
-      <div class="e26_292"></div>
-      <div class="e26_364">
-        <div class="e26_365"></div> 
-        
-      </div>
-    </div>
+
+  <div id="main" style="height:75%; width:85%; margin:30% 0% 0% 10%; overflow-y:auto; overflow-y:auto;;">
+
   </div>
-  <div class="e26_311">
-    <div class="e26_312"><span class="e26_384">전공과 진로 탐색
-차주 수업은 휴강입니다</span>
-      <div class="e26_314"><span class="ei26_385_26_410">공지사항 이동</span></div>
-    </div>
-    <div class="e26_315">
-      <div class="e26_316"></div>
-      <div class="e26_388">
-        <div class="e26_389"></div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="e26_335">
-    <div class="e26_336">
-      <div class="e26_337"><span class="ei26_385_26_410">공지사항 이동</span></div><span class="e26_338">자바 프로그래밍
-출석 후 도주한 학생 자체적으로 연락바랍니다</span>
-    </div>
-    <div class="e26_339">
-      <div class="e26_340"></div>
-      <div class="e26_341">
-        <div class="e26_342"></div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="e26_359">
-    <div class="e26_360"><span class="e26_361">성과 사랑 과제 제출 전날입니다.</span></div>
-    <div class="e26_362">
-      <div class="e26_363"></div>
-      <div class="e26_364">
-        <div class="e26_365"></div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="e26_382">
-    <div class="e26_383"><span class="e26_384">객체 지향 프로그래밍
-중간 고사 관련 안내</span>
-      <div class="e26_385"><span class="ei26_385_26_410">공지사항 이동</span></div>
-    </div>
-    <div class="e26_386">
-      <div class="e26_387"></div>
-      <div class="e26_388">
-        <div class="e26_389"></div>  
-        
-      </div>
-    </div>
-  </div>
-  <div class="e26_406">
-    <div class="e26_407"><span class="e26_408">자바 프로그래밍중간 발표 안내</span>
-      <div class="e26_409"><span class="ei26_385_26_410">공지사항 이동</span></div>
-    </div>
-    <div class="e26_411">
-      <div class="e26_412"></div>
-      <div class="e26_413">
-        <div class="e26_415"></div>
-      </div>
-    </div>
-  </div><span class="e26_431">2023.11.03</span><span class="e26_432">2023.11.06 (오늘)</span><span class="e26_433">알림</span>
+  <span class="e26_433">알림</span>
   <div class="e26_434">
     <div class="e26_435" onclick="window.location.href = '/functions'">
       
@@ -106,4 +41,68 @@
   
 </div>
 
-</body></html>
+</body>
+<script>
+    // 서버로 POST 요청을 보내 데이터를 받아오는 함수
+  async function fetchLectureData() {
+      try {
+          const response = await fetch('/api/LectureData', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+              },
+              // 이곳에 필요한 POST 데이터를 넣어줄 수 있음
+          });
+
+          if (!response.ok) {
+              throw new Error('Failed to fetch data');
+          }
+
+          return await response.json();
+      } catch (error) {
+          console.error('Error fetching data:', error.message);
+          return null;
+      }
+  }
+
+  // main 태그 가져오기
+  const mainElement = document.getElementById('main');
+
+  // 데이터를 받아오고 HTML을 동적으로 생성하여 main 태그에 추가하는 함수
+  async function renderLectureData() {
+      const lectureData = await fetchLectureData();
+
+      if (!lectureData) {
+          return;
+      }
+
+      lectureData.forEach(lecture => {
+          const newDiv = document.createElement('div');
+          newDiv.innerHTML = `
+              <div style="padding-bottom:30px">
+                  <span class="e26_432">${lecture.date}</span>
+                  <div class="e26_406">
+                      <div class="e26_407">
+                          <span class="e26_408">${lecture.announcement}<br>${lecture.lecturename}</span>
+                          <div class="e26_409"></div>
+                      </div>
+                      <div class="e26_411">
+                          <div class="e26_412"></div>
+                          <div class="e26_413">
+                              <div class="e26_415"></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          `;
+
+          // main 태그에 추가
+          mainElement.appendChild(newDiv);
+      });
+  }
+
+  // renderLectureData 함수 호출
+  renderLectureData();
+
+</script>
+</html>

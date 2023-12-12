@@ -36,18 +36,46 @@
               </div>
             </div>
           </div>
-        </div><span class="e26_498">빈 강의실 목록</span>
+        </div><span class="e26_498">사용 중 강의실</span>
         <div class="e26_499">
           <div class="e26_500">
             <div class="e26_501"></div>
-            <div class="e26_502"><span class="e26_503" onclick="fetchDataAndPopulate()"></span><span class="e26_504">Search</span></div>
+              <div>
+                  <select style="left: 72%; top: 10%;" id="week" class="e26_507">
+                      <option value="01">1 교시</option>
+                      <option value="02">2 교시</option>
+                      <option value="03">3 교시</option>
+                      <option value="04">4 교시</option>
+                      <option value="05">5 교시</option>
+                      <option value="06">6 교시</option>
+                      <option value="07">7 교시</option>
+                      <option value="08">8 교시</option>
+                      <option value="09">9 교시</option>
+                      <option value="10">10 교시</option>
+                      <option value="11">11 교시</option>
+                      <option value="12">12 교시</option>
+                      <option value="13">13 교시</option>
+                      <option value="14">14 교시</option>
+                      <option value="15">15 교시</option>
+                  </select>
+                  <div class=e26_508 style="left: 75%; top: 32%;">
+              </div>
+
+              </div>
+            <div class="e26_502"><span class="e26_503" onclick="fetchDataAndPopulate()"></span><span class="e26_504">
+              </span></div>
+
           </div>
           <div class="e26_505">
             <div class="e26_506">
               <select id="time" class="e26_507">
-                  <option value="01">1 교시</option>
-                  <option value="02">2 교시</option>
-                  <option value="03">3 교시</option>
+                  <option value="01">월요일</option>
+                  <option value="02">화요일</option>
+                  <option value="03">수요일</option>
+                  <option value="04">목요일</option>
+                  <option value="05">금요일</option>
+                  <option value="06">토요일</option>
+                  <option value="07">일요일</option>
               </select>
               <div class=e26_508></div>
             </div>
@@ -56,9 +84,33 @@
         <div class="e26_515">
             <span >
                 <select id="building" class="e26_516">
-                    <option value="정보공학관">정보공학관</option>
-                    <option value="공학관">공학관</option>
-                    <option value="국제관">국제관</option>
+                    <option>정보공학관</option>
+                    <option>공학관</option>
+                    <option>국제관</option>
+                    <option>간호학관</option>
+                    <option>건윤관</option>
+                    <option>공유대학</option>
+                    <option>대학본관</option>
+                    <option>동의스포츠센터</option>
+                    <option>법정관</option>
+                    <option>병원</option>
+                    <option>보건소</option>
+                    <option>산학협력관</option>
+                    <option>상경관</option>
+                    <option>생활과학관</option>
+                    <option>음악관</option>
+                    <option>의료보건관</option>
+                    <option>제1인문관</option>
+                    <option>제2인문관</option>
+                    <option>중앙도서관</option>
+                    <option>지천관</option>
+                    <option>창의관</option>
+                    <option>테니스관</option>
+                    <option>학생군사교육단</option>
+                    <option>한의학관</option>
+                    <option>효민야구장</option>
+                    <option>효민체육관</option>
+                    <option>효민축구장</option>
                 </select>
             </span>
         </div>
@@ -71,7 +123,7 @@
     function fetchDataAndPopulate() {
         // 서버로 전송할 데이터
         var postData = {
-            "time": "=\"01" + document.getElementById("time").value,
+            "time": "=\""+ document.getElementById("week").value + document.getElementById("time").value,
             "buildingName": document.getElementById("building").value
         };
         console.log(document.getElementById("building").value);
